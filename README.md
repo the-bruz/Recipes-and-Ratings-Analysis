@@ -1,6 +1,6 @@
 ## Introduction
 
-**Do people generally prefer high calorie foods or low calorie ones?**  
+Nowadays, more and more people tend to pay more attention to whether foods are healthy rather than their energy provided. One question has been debated frequently: **Do people generally prefer high calorie foods or low calorie ones?**  
 
 To answer this question, appropriate dataset and rigorous hypothesis test are necessary. In this project, research will be conducted on the dataset **Recipes and Ratings**. This dataset contains two tables, one for recipes and one for reviews/ratings. For the purpose of this project, the two tables will be merged and used as one dataset of 234429 rows.  
 Some key attributes of the dataset include:  
