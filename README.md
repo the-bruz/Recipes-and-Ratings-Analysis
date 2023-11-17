@@ -97,7 +97,7 @@ Again, a rigorous hypothesis test is proposed with the following setup:
 * Null Hypothesis: The calories and average rating of recipes are not related.  
 * Alternative Hypothesis: Average ratings for recipes without high calories are higher than the ones with high calories. 
 * Test Statistic: Difference between mean of avg ratings of recipes with high calories (more than the 4/5 of the recipes) and that of the other recipes.
-* Significance Level: 5%
+* Significance Level: 1%
 
 The observed test statistic for the test is around -0.02, and the p value is 0.0%. Since the p value is lower than the significance level, the null hypothesis is rejected.  It is more likely that people generally prefer food without high calories rather than the ones with high calories.  
 
