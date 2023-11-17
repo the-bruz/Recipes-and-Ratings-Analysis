@@ -35,5 +35,55 @@ Here is the first 5 rows of the dataset after data cleaning:
 
 ## Exploratory Data Analysis
 
-### **Univariate Analysis**
+### Univariate Analysis
 
+<iframe src="assets/fig1.html" width=1000 height=600 frameBorder=0></iframe>
+
+This histogram shows the distribution of calories of recipes, which is the main focus of this project. It can be seen that most recipes fall in the range 75-200 calories, and the peak is at 125-175 calories.
+
+### Bivariate Analysis
+
+<iframe src="assets/fig3.html" width=500 height=500 frameBorder=0></iframe>
+
+This scatter plot of rating and calories give the overall trend of rating vs. calories: recipes with extreme high calories (6k+ calories) tend to receive higher ratings rather than lower ratings. 
+
+### Interesting Aggregates
+
+<iframe src="assets/fig4.html" width=500 height=500 frameBorder=0></iframe>
+
+The dataset is grouped by `high_calories` column, and the average rating of each category is plotted in the histogram. The recipes without high calories seem to have a higher rating on average, which is a significant finding for the hypothesis test in the last section of this project.
+
+## Assessment of Missingness
+
+### NMAR Analysis
+
+The `description` column is considered **NMAR**. It is reasonable that the missing of `description` of a recipe could be the inferred by its total number of reviews, since a recipe with a good description should be more likely to be reviewed by users.
+
+### Missingness Dependency
+
+* `n_reviews` column
+
+  As discussed before, the missingness of `description` might depend on the `n_reviews` column. Therefore, the permutation test is proposed with the following setup:
+
+  * Null Hypothesis: The distributions of `n_reviews` where `description` is missing and that where `n_reviews` is not missing are similar.
+  * Alternative Hypothesis: The distributions of `n_reviews` where `description` is missing and that where `n_reviews` is not missing are different.
+  * Test Statistic: Two-sample Kolmogorov-Smirnov test
+  * Significance Level: 1%
+
+  Before performing the test, a plot is produced to help understand the distributions stated above:
+
+  <iframe src="assets/fig5.html" width=800 height=800 frameBorder=0></iframe>
+
+  The two distributions do look like different. Still, a rigorous permutation test is necessary.  
+
+  The observed test statistic for the test is around 0.46, and the p value is 0.0%. Since the p value is lower than the significance level, the null hypothesis is rejected.  
+
+  Therefore, the missingness of `description` **does depend on** the number of reviews of recipes.
+
+* `carbohydrates` column
+
+  The missingness of `description` should be unrelated to the recipe's nutrition. Therefore, a similar permutation test is performed on the `carbohydrates` column.  
+
+  The observed test statistic for the test is around 0.13, and the p value is 2.7%. Since the p value is higher than the significance level, the null hypothesis is not rejected.  
+
+  Therefore, the missingness of `description` **does not depend on** the carbohydrates of recipes.
