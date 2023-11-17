@@ -23,10 +23,17 @@ Before analyzing the dataset, the data needs to be cleaned. For the purpose of t
 
 Here is the first 5 rows of the dataset after data cleaning:  
 
-|      |                               name |     id | minutes | contributor_id |  submitted | n_steps |                                       description | n_ingredients |   user_id | recipe_id | rating | avg_rating | calories | total fat | sugar | sodium | protein | saturated fat | carbohydrates | high_calories |
-| ---: | ---------------------------------: | -----: | ------: | -------------: | ---------: | ------: | ------------------------------------------------: | ------------: | --------: | --------: | -----: | ---------: | -------: | --------: | ----: | -----: | ------: | ------------: | ------------: | ------------: |
-|    0 |  1 brownies in the world best ever | 333281 |      40 |         985201 | 2008-10-27 |      10 | these are the most; chocolatey, moist, rich, d... |             9 |  386585.0 |  333281.0 |    4.0 |        4.0 |    138.4 |      10.0 |  50.0 |    3.0 |     3.0 |          19.0 |           6.0 |         False |
-|    1 | 1 in canada chocolate chip cookies | 453467 |      45 |        1848091 | 2011-04-11 |      12 | this is the recipe that we use at my school ca... |            11 |  424680.0 |  453467.0 |    5.0 |        5.0 |    595.1 |      46.0 | 211.0 |   22.0 |    13.0 |          51.0 |          26.0 |          True |
-|    2 |             412 broccoli casserole | 306168 |      40 |          50969 | 2008-05-30 |       6 | since there are already 411 recipes for brocco... |             9 |   29782.0 |  306168.0 |    5.0 |        5.0 |    194.8 |      20.0 |   6.0 |   32.0 |    22.0 |          36.0 |           3.0 |         False |
-|    3 |             412 broccoli casserole | 306168 |      40 |          50969 | 2008-05-30 |       6 | since there are already 411 recipes for brocco... |             9 | 1196280.0 |  306168.0 |    5.0 |        5.0 |    194.8 |      20.0 |   6.0 |   32.0 |    22.0 |          36.0 |           3.0 |         False |
-|    4 |             412 broccoli casserole | 306168 |      40 |          50969 | 2008-05-30 |       6 | since there are already 411 recipes for brocco... |             9 |  768828.0 |  306168.0 |    5.0 |        5.0 |    194.8 |      20.0 |   6.0 |   32.0 |    22.0 |          36.0 |           3.0 |         False |
+| name                               | id     | n_steps | n_ingredients | rating | avg_rating | calories | total fat | sugar | sodium | protein | saturated fat | carbohydrates | high_calories |
+| ---------------------------------- | ------ | ------- | ------------- | ------ | ---------- | -------- | --------- | ----- | ------ | ------- | ------------- | ------------- | ------------- |
+| 1 brownies in the world best ever  | 333281 | 10      | 9             | 4.0    | 4.0        | 138.4    | 10.0      | 50.0  | 3.0    | 3.0     | 19.0          | 6.0           | False         |
+| 1 in canada chocolate chip cookies | 453467 | 12      | 11            | 5.0    | 5.0        | 595.1    | 46.0      | 211.0 | 22.0   | 13.0    | 51.0          | 26.0          | True          |
+| 412 broccoli casserole             | 306168 | 6       | 9             | 5.0    | 5.0        | 194.8    | 20.0      | 6.0   | 32.0   | 22.0    | 36.0          | 3.0           | False         |
+| 412 broccoli casserole             | 306168 | 6       | 9             | 5.0    | 5.0        | 194.8    | 20.0      | 6.0   | 32.0   | 22.0    | 36.0          | 3.0           | False         |
+| 412 broccoli casserole             | 306168 | 6       | 9             | 5.0    | 5.0        | 194.8    | 20.0      | 6.0   | 32.0   | 22.0    | 36.0          | 3.0           | False         |
+
+
+
+## Exploratory Data Analysis
+
+### **Univariate Analysis**
+
