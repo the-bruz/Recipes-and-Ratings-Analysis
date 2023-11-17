@@ -87,3 +87,20 @@ The `description` column is considered **NMAR**. It is reasonable that the missi
   The observed test statistic for the test is around 0.13, and the p value is 2.7%. Since the p value is higher than the significance level, the null hypothesis is not rejected.  
 
   Therefore, the missingness of `description` **does not depend on** the carbohydrates of recipes.
+
+## Hypothesis Testing
+
+After all the work, it is time to verify the initial problem: Do people generally prefer high calorie foods or low calorie ones?  
+
+Again, a rigorous hypothesis test is proposed with the following setup:
+
+* Null Hypothesis: The calories and average rating of recipes are not related.  
+* Alternative Hypothesis: Average ratings for recipes without high calories are higher than the ones with high calories. 
+* Test Statistic: Difference between mean of avg ratings of recipes with high calories (more than the 4/5 of the recipes) and that of the other recipes.
+* Significance Level: 5%
+
+The observed test statistic for the test is around -0.02, and the p value is 0.0%. Since the p value is lower than the significance level, the null hypothesis is rejected.  It is more likely that people generally prefer food without high calories rather than the ones with high calories.  
+
+A figure is produced to show the test result, the red line is the position of the observed statistic:
+
+<iframe src="assets/fig6.html" width=600 height=600 frameBorder=0></iframe>
